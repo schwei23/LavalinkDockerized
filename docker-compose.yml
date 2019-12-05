@@ -1,0 +1,12 @@
+services:
+
+  lavalink:
+    build:
+      context: lavalink
+      dockerfile: Dockerfile
+    ports:
+      - "2333:2333"
+    networks:
+      - default
+    restart: always
+    container_name: lavalink
