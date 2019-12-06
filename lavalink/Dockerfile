@@ -1,5 +1,10 @@
-FROM openjdk:14-buster
+FROM openjdk:11.0.5-jre-slim-buster
+
+RUN groupadd -g 322 lavalink && \
+  useradd -r -u 322 -g lavalink lavalink
+
+USER lavalink
 
 ADD Lavalink.jar application.yml ./
 
-CMD ["java", "-jar", "Lavalink.jar"]
+ENTRYPOINT ["java", "-Djdk.tls.client.protocols=TLSv1.2", "-Xmx4G", "-jar", "Lavalink.jar"]
