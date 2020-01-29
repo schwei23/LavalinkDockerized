@@ -7,4 +7,4 @@ USER lavalink
 
 ADD Lavalink.jar application.yml ./
 
-ENTRYPOINT ["java", "-Djdk.tls.client.protocols=TLSv1.2", "-Xmx2G", "-jar", "Lavalink.jar"]
+ENTRYPOINT ["java", "-Djdk.tls.client.protocols=TLSv1.2", "-Xmx4G", "-jar", "Lavalink.jar"]
