@@ -1,4 +1,4 @@
-FROM openjdk:11.0.5-jre-slim-buster
+FROM openjdk:11.0.6-jre-slim-buster
 
 RUN groupadd -g 322 lavalink && \
   useradd -r -u 322 -g lavalink lavalink
