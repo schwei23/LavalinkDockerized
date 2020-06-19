@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-alpine:13
+FROM azul/zulu-openjdk:13
 
 RUN groupadd -g 322 lavalink && \
   useradd -r -u 322 -g lavalink lavalink
