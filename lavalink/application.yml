@@ -13,15 +13,15 @@ lavalink:
       mixer: true
       http: true
       local: false
-    bufferDurationMs: 500
+    bufferDurationMs: 750
     youtubePlaylistLoadLimit: 1 # Number of pages at 100 each
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
     ratelimit:
-      strategy: "RotatingNanoSwitch"
+      strategy: "RotateOnBan"
       searchTriggersFail: true
-      retryLimit: -1
+      retryLimit: 3
 
 metrics:
   prometheus:
