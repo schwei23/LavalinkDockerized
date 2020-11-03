@@ -1,6 +1,9 @@
 server: # REST and WS server
   port: 2333
   address: 0.0.0.0
+spring:
+  main:
+    banner-mode: log
 lavalink:
   server:
     password: "youshallnotpass"
@@ -13,15 +16,12 @@ lavalink:
       mixer: true
       http: true
       local: false
-    bufferDurationMs: 750
-    youtubePlaylistLoadLimit: 1 # Number of pages at 100 each
+    bufferDurationMs: 1000
+    youtubePlaylistLoadLimit: 5
+    playerUpdateInterval: 3
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: true
     gc-warnings: true
-    ratelimit:
-      strategy: "RotateOnBan"
-      searchTriggersFail: true
-      retryLimit: 3
 
 metrics:
   prometheus:
@@ -30,6 +30,7 @@ metrics:
 
 sentry:
   dsn: ""
+  environment: ""
 
 logging:
   file:
